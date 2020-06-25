@@ -8,7 +8,7 @@
 BT::NodeStatus WaitForGoal::tick() {
     geometry_msgs::PoseStamped goalpose;
     geometry_msgs::PoseStampedConstPtr msg = 
-      ros::topic::waitForMessage<geometry_msgs::PoseStamped>(goal_topic_,ros::Duration(60));
+      ros::topic::waitForMessage<geometry_msgs::PoseStamped>(goal_topic_,ros::Duration(600));
       if (msg == NULL){
          ROS_INFO("FAILED HERE");	
 	 return NodeStatus::FAILURE;
